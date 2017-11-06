@@ -10,7 +10,7 @@
 		</commentGenerator>
 		<!-- 数据库连接信息，驱动类、连接地址、用户名、密码 -->
 		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
-			connectionURL="jdbc:mysql://localhost:3306/ttshop" userId="root"
+			connectionURL="jdbc:mysql://localhost:3306/loan" userId="root"
 			password="123456">
 		</jdbcConnection>
 		<!--<jdbcConnection driverClass="oracle.jdbc.OracleDriver"-->
@@ -24,7 +24,7 @@
 			<property name="forceBigDecimals" value="false" />
 		</javaTypeResolver>
 		<!-- 生成POJO类 -->
-		<javaModelGenerator targetPackage="com.day.ttshop.pojo.po"
+		<javaModelGenerator targetPackage="com.cdyy.loan.pojo.po"
 			targetProject="src/main/java/">
 			<!--是否让schema作为包的后缀-->
 			<property name="enableSubPackages" value="false" />
@@ -32,29 +32,30 @@
 			<property name="trimStrings" value="true" />
 		</javaModelGenerator>
 		<!-- 生成mapper映射文件 -->
-		<sqlMapGenerator targetPackage="com.day.ttshop.dao"
+		<sqlMapGenerator targetPackage="com.cdyy.loan.dao"
 			targetProject="src/main/java/">
 			<!--同上-->
 			<property name="enableSubPackages" value="false" />
 		</sqlMapGenerator>
 		<!-- 生成mapper接口 -->
 		<javaClientGenerator type="XMLMAPPER"
-			targetPackage="com.day.ttshop.dao" targetProject="src/main/java/">
+			targetPackage="com.cdyy.loan.dao" targetProject="src/main/java/">
 			<!--同上-->
 			<property name="enableSubPackages" value="false" />
 		</javaClientGenerator>
 		<!-- 指定数据库表 -->
-		<table schema="" tableName="tb_content"></table>
-		<table schema="" tableName="tb_content_category"></table>
-		<table schema="" tableName="tb_item"></table>
-		<table schema="" tableName="tb_item_cat"></table>
-		<table schema="" tableName="tb_item_desc"></table>
-		<table schema="" tableName="tb_item_param"></table>
-		<table schema="" tableName="tb_item_param_item"></table>
-		<table schema="" tableName="tb_order"></table>
-		<table schema="" tableName="tb_order_item"></table>
-		<table schema="" tableName="tb_order_shipping"></table>
-		<table schema="" tableName="tb_user"></table>
+		<!--<table schema="" tableName="loan_bank"></table>-->
+		<!--<table schema="" tableName="loan_capital"></table>-->
+		<!--<table schema="" tableName="loan_customer"></table>-->
+		<table schema="" tableName="loan_customer_product"></table>
+		<!--<table schema="" tableName="loan_expenditure"></table>-->
+		<!--<table schema="" tableName="loan_income"></table>-->
+		<!--<table schema="" tableName="loan_loan"></table>-->
+		<!--<table schema="" tableName="loan_product"></table>-->
+		<!--<table schema="" tableName="loan_recharge"></table>-->
+		<!--<table schema="" tableName="loan_repayment"></table>-->
+		<!--<table schema="" tableName="loan_sysrole"></table>-->
+		<!--<table schema="" tableName="loan_withdrawals"></table>-->
 		<!--<table tableName="UserInfo" domainObjectName="UserInfo"-->
 			<!--enableCountByExample="false" enableUpdateByExample="false"-->
 			<!--enableDeleteByExample="false" enableSelectByExample="false"-->
